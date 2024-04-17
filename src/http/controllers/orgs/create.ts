@@ -9,7 +9,10 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
     name: z.string(),
     email: z.string().email(),
     cep: z.string(),
-    address: z.string(),
+    state: z.string(),
+    city: z.string(),
+    neighborhood: z.string(),
+    street: z.string(),
     whatsapp: z.string(),
     password: z.string(),
   })
@@ -24,7 +27,10 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
       name: org.name,
       email: org.email,
       cep: org.cep,
-      address: org.address,
+      state: org.state,
+      city: org.city,
+      neighborhood: org.neighborhood,
+      street: org.street,
       whatsapp: org.whatsapp,
       password: org.password,
     })

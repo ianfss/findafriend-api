@@ -8,7 +8,10 @@ interface CreateOrgUseCaseResquest {
   name: string
   email: string
   cep: string
-  address: string
+  state: string
+  city: string
+  neighborhood: string
+  street: string
   whatsapp: string
   password: string
 }
@@ -25,7 +28,10 @@ export class CreateOrgUseCase {
     name,
     email,
     cep,
-    address,
+    state,
+    city,
+    neighborhood,
+    street,
     whatsapp,
     password,
   }: CreateOrgUseCaseResquest): Promise<CreateOrgUseCaseResponse> {
@@ -42,7 +48,10 @@ export class CreateOrgUseCase {
       name,
       email,
       cep,
-      address,
+      state,
+      city,
+      neighborhood,
+      street,
       whatsapp,
       password: passwordHash,
     })

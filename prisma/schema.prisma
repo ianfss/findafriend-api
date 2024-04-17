@@ -20,7 +20,10 @@ model Org {
   name             String
   email            String @unique
   cep              String
-  address          String
+  state            String
+  city             String
+  neighborhood     String
+  street           String
   whatsapp         String
   password         String
 
