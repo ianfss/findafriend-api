@@ -7,7 +7,7 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
   const createOrgBodySchema = z.object({
     responsibleName: z.string(),
     name: z.string(),
-    email: z.string(),
+    email: z.string().email(),
     cep: z.string(),
     address: z.string(),
     whatsapp: z.string(),
