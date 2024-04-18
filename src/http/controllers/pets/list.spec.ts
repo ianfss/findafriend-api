@@ -47,4 +47,13 @@ describe('List Pets (e2e)', () => {
     expect(response.statusCode).toEqual(200)
     expect(response.body.pets).toHaveLength(2)
   })
+
+  it('should not be able to list a pets without a city', async () => {
+    const response = await request(app.server)
+      .get('/pets')
+      .query({ age: '3 anos' })
+      .send()
+
+    expect(response.statusCode).toEqual(400)
+  })
 })
